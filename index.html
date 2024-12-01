@@ -1,1 +1,163 @@
-<h1>It works!</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>atstudio.co.kr</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+        <link href="//fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+        <style>
+            .nanum-myeongjo-regular {
+                font-family: "Nanum Myeongjo", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .nanum-myeongjo-bold {
+                font-family: "Nanum Myeongjo", serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+            .nanum-myeongjo-extrabold {
+                font-family: "Nanum Myeongjo", serif;
+                font-weight: 800;
+                font-style: normal;
+            }
+            body {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background: #fff;
+            }
+            header {
+                position: absolute;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                width: 0;
+                height: 0;
+                right: 0;
+                top: 0;
+                border-bottom: 50px solid transparent;
+                border-top: 50px solid #000;
+                border-left: 50px solid transparent;
+                border-right: 50px solid #000;
+                a:link, a:visited, a:active {
+                    color: #fff;
+                    font-size: 2.5em;
+                }
+            }
+            main {
+                /* background: #abc; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1 0 auto;
+            }
+                .id-card {
+                    background-color: transparent;
+                    width: 27em;;
+                    height: 15em;
+                    perspective: 1000px;
+                    transform: rotate3d(1, 1, 1, 357deg);
+                }
+                    .id-card-inner {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        transition: transform 0.6s;
+                        transform-style: preserve-3d;
+                        /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+                    }
+                    .id-card:hover .id-card-inner {
+                        transform: rotateY(180deg);
+                    }
+                        .id-card-front, .id-card-back {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            -webkit-backface-visibility: hidden;
+                            backface-visibility: hidden;
+                            background: #fff;
+                            box-shadow: 5px 5px 20px 0px #ccc;
+                            background-color: #474747;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            text-shadow: 1px 0px 1px rgba(165, 165, 165, 0.5);
+                        }
+                        .id-card-front {
+                            /* color: #8c8c8c; */
+                        }
+                            .id-card-front > h1 {
+                                font-size: 3rem;
+                                text-align: center;
+                                letter-spacing: 1em;
+                                margin-top: .3em; margin-bottom: .3em;
+                                margin-right: -1em;
+                            }
+                            .id-card-front > h2 {
+                                font-size: 1.8rem;
+                                text-align: center;
+                                margin-top: 0; margin-bottom: 0;
+                            }
+                        .id-card-back {
+                            transform: rotateY(180deg);
+                        }
+                            .id-card-back > h3 {
+                                font-size: 1.6rem;
+                                margin-bottom: 0;
+                            }
+                            .id-card-back > ul {
+                                font-size: 1.05rem;
+                                text-align: left;
+                                line-height: 1.55rem;
+                                padding-left: 5rem;
+                            }
+                                .id-card-back li::marker {
+                                    color: #727272;
+                                }
+
+        </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E1BHG4GFW"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-2E1BHG4GFW');
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="https://github.com/KimTibber"><i class="fab fa-github"></i></a>
+        </header>
+        <main>
+            <div class="id-card">
+                <div class="id-card-inner">
+                    <div class="id-card-front">
+                        <h1 class="nanum-myeongjo-extrabold">김정현</h1>
+                        <h2 class="nanum-myeongjo-regular">Kim Jeong Hyeon</h2>
+                    </div>
+                    <div class="id-card-back">
+                        <h3 class="nanum-myeongjo-extrabold">Backend Developer</h3>
+                        <ul class="nanum-myeongjo-bold">
+                            <li>Python (Django/DRF, FastAPI)</li>
+                            <li>JavaScript (ES5, ES6+)</li>
+                            <li>PostgreSQL, MySQL, Redis</li>
+                            <li>AWS, Linux skills (More than basic)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
